@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.mTabContainer {
+	display: flex;
+	background-color: #000;
+	opacity: .9;
+	color: #fff;
+	padding: 50px 50px;
+	position: relative;
+}
+
+.mTabContainer ul {
+	padding: 0;
+	list-style: none;
+}
+
+
+
+
+
+.mTabContainer .mTabMenu ul li {
+	font-size: 40px;
+	line-height: 45px;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+.mTabContainer .mTabMenu ul li span {
+	color: #fff;
+	opacity: .3;
+}
+
+.mTabContainer .mTabMenu ul li span.active {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.mTabContainer .mTabMenu {
+	width: 270px;
+	position: absolute;
+	height: 100%;
+	z-index: 50;
+}
+
+
+
+
+
+.mTabContainer .mTabContent {
+	position: relative;
+}
+
+.mTabContainer .mTabContent .imageAndTextWrapper {
+	display: flex;
+}
+
+.mTabContainer .mTabContent .imageAndTextWrapper .imagePart, 
+.mTabContainer .mTabContent .imageAndTextWrapper .textPart {
+    max-width: 50%;
+    padding: 0px 10px;
+    min-width: 0;
+}
+
+.mTabContainer .mTabContent .imageAndTextWrapper .textPart {
+	display: flex;
+	align-items: flex-end;
+}
+
+.mTabContainer .mTabContent .imageAndTextWrapper .textPart {
+	font-size: 25px;
+	line-height: 35px;
+}
+
+.mTabContainer .mTabContent .imageAndTextWrapper .textPart p {
+	margin-bottom: 15px;
+}
+
+.mTabContainer .mTabContent .imageAndTextWrapper .textPart a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.mTabContainer .mTabContent > ul > li {
+	opacity: 0;
+	display: none;
+}
+
+.mTabContainer .mTabContent > ul > li.active {
+	opacity: 1;
+	display: block;
+}
+
+.mTabContainer .mTabContent > ul > li.active img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+.tabSectionBg {
+    background-image: radial-gradient(circle closest-side at 50% 35%, #162e74, #000);
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: -1;
+}
+
+
+
+
+
+
+@media (max-width: 830px){
+	.mTabContainer .mTabMenu ul li {
+		font-size: 22px;
+		line-height: 22px;
+		margin-bottom: 8px;
+	}
+
+	.mTabContainer .mTabMenu {
+		width: 190px;
+	}
+
+	.mTabContainer .mTabContent {
+		position: relative;
+	}
+
+	.mTabContainer .mTabContent .imageAndTextWrapper .textPart {
+		font-size: 18px;
+		line-height: 25px;
+	}
+
+	.mTabContainer .mTabContent .imageAndTextWrapper .textPart a {
+		font-size: 20px;
+	}
+}
+
+
+
+
+@media (max-width: 700px){
+	.mTabContainer {
+		padding: 50px 10px;
+	}
+
+	.mTabContainer .mTabMenu {
+		width: 150px;
+	}
+
+	.mTabContainer .mTabContent .imageAndTextWrapper {
+		display: block;
+	}
+
+	.mTabContainer .mTabContent .imageAndTextWrapper .imagePart, .mTabContainer .mTabContent .imageAndTextWrapper .textPart {
+		max-width: 100%;
+		padding: 0px 10px;
+		min-width: 0;
+	}
+}
